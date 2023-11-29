@@ -1,0 +1,92 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.progress_container{
+    width: 70%;
+    height: 10%;
+    margin: auto;
+    margin-top: 43vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.progress{
+    width: 33px;
+    height: 33px;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: rgba(51, 51, 51, 0.5);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.progress_now{
+    width: 33px;
+    height: 33px;
+    border: 1.5px solid #333333;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.study_text{
+    width: 90%;
+    height: auto;
+    min-height: 10vh;
+    max-height: 20vh;
+    margin: 3% auto;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.listen_btn{
+    width: 40%;
+    height: 8%;
+    margin: 10% auto 0;
+    background-color: #FFD18B;
+    border: 1px solid #FFD18B;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.controller_container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7% auto;
+}
+.controller{
+    width: 15%;
+    height: 15%;
+}
+.controller img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
