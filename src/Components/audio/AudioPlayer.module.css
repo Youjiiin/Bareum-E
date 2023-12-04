@@ -1,0 +1,14 @@
+.listen_btn{
+    width: 70%;
+    height: 7vh;
+    margin: 15% auto 0;
+    background-color: #FFD18B;
+    border: 1px solid #FFD18B;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}

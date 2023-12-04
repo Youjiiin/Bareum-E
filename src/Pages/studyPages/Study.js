@@ -4,6 +4,7 @@ import next from "../../assets/next.png";
 import prev from "../../assets/prev.png"
 import { useState } from "react";
 import Nav from "../../Components/navBar/Nav.js";
+import AudioPlayer from "../../Components/audio/AudioPlayer.js";
 
 const Study = () => {
     const [step, setStep] = useState(0);
@@ -37,7 +38,7 @@ const Study = () => {
         </div>
 
         <div className={style.study_text}>{TEXT[step]}</div>
-        <button className={style.listen_btn}>듣기</button>
+        <AudioPlayer />
 
         <div className={style.controller_container}>
             <div className={style.controller} onClick={prevStepHandler}>
