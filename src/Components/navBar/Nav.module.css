@@ -1,0 +1,16 @@
+.wrapper{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper img {
+    width: 80%;
+    height: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

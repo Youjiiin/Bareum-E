@@ -22,7 +22,8 @@ const Main = () => {
             <button 
             className={style.btn_study}
             onClick={studyHandler}>공부</button>
-            <button className={style.btn_test}>시험</button>
+            <button className={style.btn_test}
+            onClick={testHandler}>시험</button>
         </div>
     </div>
 };
