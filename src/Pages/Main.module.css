@@ -1,55 +1,58 @@
 .wrapper{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    position: relative;
 }
-.title{
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.title img{
-    width: 90%;
-    height: 70%;
-}
-.title p{
-    font-size: 24px;
-    font-weight: bold;
-    color: #333333;
+.wrapper p{
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    top: 8%;
 }
 
 .btn_container{
     width: 100%;
     height: 35%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    position: absolute;
+    top: 45%;
+}
+.btn{
+    width: 42%;
+    height: 65%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: #333333;
+    font-size: 1.4rem;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 7vh;
+    gap: 1.5vh;
+    font-family: 'fonts';
 }
-.btn_study{
-    width: 70%;
-    height: 50px;
-    background-color: #73DBD5;
-    border: 1px solid #73DBD5;
-    border-radius: 30px;
-    color: #333333;
-    font-size: 1.2rem;
-    font-weight: bold;
+.btn img{
+    width: 60%;
+    height: 50%;
 }
-.btn_test{
-    width: 70%;
-    height: 50px;
-    background-color: #FFA5B8;
-    border: 1px solid #FFA5B8;
-    border-radius: 30px;
-    color: #333333;
-    font-size: 1.2rem;
-    font-weight: bold;
+
+.getUserInfo{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 82%;
+}
+
+.getUserInfo img{
+    width: 100%;
+    height: 100%;
 }

@@ -10,6 +10,9 @@ const Main = () => {
 
     return <div className={style.wrapper}>
         <img src={loading} alt="loading" onClick={mainHandler}/>
+        <p>Bareum:E <br/>
+            바름이랑 같이 공부해요
+        </p>
     </div>
 }
 

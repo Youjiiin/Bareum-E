@@ -1,9 +1,15 @@
+.wrapper{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .listen_btn{
-    width: 70%;
-    height: 7vh;
-    margin: 15% auto 0;
-    background-color: #FFD18B;
-    border: 1px solid #FFD18B;
+    width: 130px;
+    height: 180px;
     border-radius: 20px;
     color: #333333;
     font-size: 1.3rem;
@@ -11,4 +17,10 @@
     display: grid;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.listen_btn img {
+    width: 130px;
+    height: 130px;
 }

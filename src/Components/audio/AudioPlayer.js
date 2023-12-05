@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import listen from "../../assets/audioTest.m4a";
 import style from "./AudioPlayer.module.css";
+import playImg from "../../assets/listen.png";
+import pause from "../../assets/pause.png";
 
 const useAudio = (listen) => {
     const [audio] = useState(new Audio(listen));
@@ -28,8 +30,15 @@ const AudioPlayer = () => {
   const [playing, toggle] = useAudio(listen);
 
   return (
-    <div>
-      <button onClick={toggle} className={style.listen_btn}>{playing ? "멈추기" : "듣기"}</button>
+    <div onClick={toggle} className={style.wrapper}>
+      {playing ? 
+        <div className={style.listen_btn}>
+          <img src={pause} alt="pause"/>
+        </div>
+        :
+        <div className={style.listen_btn}>
+          <img src={playImg} alt="playBtn"/>
+        </div>}
     </div>
   );
 };

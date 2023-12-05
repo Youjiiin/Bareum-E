@@ -1,8 +1,6 @@
 .wrapper{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;

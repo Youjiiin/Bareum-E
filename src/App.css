@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'fonts';
+    src: url('./assets/BMJUA_ttf\ \(1\).ttf') format('truetype');
+}
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: #FAFAFA;
+    background-color: rgba(0, 141, 227, 0.1);
+    font-family: 'fonts';
 }

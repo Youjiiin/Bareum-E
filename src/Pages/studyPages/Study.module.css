@@ -5,12 +5,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.title {
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    margin-top: 25%;
+}
 .progress_container{
     width: 70%;
     height: 10%;
     margin: auto;
-    margin-top: 43vh;
+    margin-top: 25vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -18,9 +23,9 @@
 .progress{
     width: 33px;
     height: 33px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #EEEEEE;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -31,13 +36,13 @@
 .progress_now{
     width: 33px;
     height: 33px;
-    border: 1.5px solid #333333;
+    border: 1.5px solid #008DE3;
     border-radius: 50%;
     background-color: #FFFFFF;
     display: grid;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    color: #008DE3;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -48,11 +53,10 @@
     min-height: 10vh;
     max-height: 20vh;
     margin: 3% auto;
-    border-radius: 15px;
-    background-color: #FFFFFF;
+    border-radius: 25px;
+    background-color: rgba(0, 141, 227, 0.5);
     color: #333333;
     font-size: 1.3rem;
-    font-weight: bold;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -74,15 +78,15 @@
 }
 
 .controller_container{
-    width: 90%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 13% auto;
+    margin-top: 5%;
 }
 .controller{
-    width: 15%;
-    height: 15%;
+    width: 30%;
+    height: 30%;
 }
 .controller img{
     width: 100%;

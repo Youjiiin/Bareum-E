@@ -31,6 +31,7 @@ const Study = () => {
     const step3 = step === 2 ? style.progress_now : style.progress;
 
     return <div className={style.wrapper} style={{ backgroundImage: `url(${studyImg})` }}>
+        <p className={style.title}>문장을 따라 읽어 볼까요?</p>
         <div className={style.progress_container}>
             <div className={step1}>1</div>
             <div className={step2}>2</div>
