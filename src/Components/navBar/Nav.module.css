@@ -1,6 +1,13 @@
+.nav_container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7vh;
+}
 .wrapper{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;

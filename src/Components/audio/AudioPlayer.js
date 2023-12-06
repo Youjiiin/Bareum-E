@@ -39,6 +39,7 @@ const AudioPlayer = () => {
         <div className={style.listen_btn}>
           <img src={playImg} alt="playBtn"/>
         </div>}
+        <p>들어보기</p>
     </div>
   );
 };
