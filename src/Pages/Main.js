@@ -22,8 +22,7 @@ const Main = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const modalState = () => {
-        console.log(isOpen);
-        setIsOpen(!isOpen);
+        setIsOpen(true);
     };
     const inputNameHandler = (e) => {
         setUserName(localStorage.getItem('name'));

@@ -18,9 +18,9 @@ const Nav = (props) => {
                 props.SetStudyStep(2);
             }
         } else if (window.location.pathname === "/test") {
-            props.SetTestStep(props.testStep + 1);
+            props.setTestStep(props.testStep + 1);
             if (props.testStep >= 2) {
-                props.SetTestStep(2);
+                props.setTestStep(2);
             }
         }
     }
@@ -31,9 +31,9 @@ const Nav = (props) => {
                 props.SetStudyStep(0);
             }
         } else if (window.location.pathname === "/test") {
-            props.SetTestStep(props.testStep - 1);
+            props.setTestStep(props.testStep - 1);
             if (props.testStep <= 0) {
-                props.SetTestStep(0);
+                props.setTestStep(0);
             }
         }
     }

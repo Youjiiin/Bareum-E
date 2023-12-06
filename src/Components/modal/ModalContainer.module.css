@@ -6,11 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
 .modal_wrapper{
     width: 80%;
     height: auto;
-    min-height: 50%;
+    min-height: 40%;
     background-color: white;
     border-radius: 30px;
     color: #333333;
