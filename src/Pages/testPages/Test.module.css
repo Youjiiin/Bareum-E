@@ -1,58 +1,40 @@
 .wrapper{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .wrapper h2{
-    text-align: left;
+    color: white;
+    font-weight: 400;
+    margin-top: 20%;
+    font-size: 2rem;
 }
+
 .question{
     width: 80%;
     height: auto;
     min-height: 13%;
-    border: 1px solid #FFD18B;
+    border: 1px solid white;
+    background-color: white;
     display: grid;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 30px;
     color: #333333;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 5%;
+    margin-top: 3%;
 }
-.record_btn{
-    width: 70%;
-    height: 8%;
-    margin: 20% auto 0;
-    background-color: #FFD18B;
-    border: 1px solid #FFD18B;
-    border-radius: 20px;
-    color: #333333;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-.submit_btn{
-    width: 70%;
-    height: 8%;
-    margin: 10% auto 0;
-    background-color: #FFA5B8;
-    border: 1px solid #FFA5B8;
-    border-radius: 20px;
-    color: #333333;
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
+
 .progress_container{
     width: 70%;
-    height: 10%;
+    height: 7%;
+    margin-top: 17vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -69,62 +51,59 @@
     color: rgba(51, 51, 51, 0.5);
     font-size: 1rem;
     font-weight: bold;
+    opacity: 50%;
 }
 .progress_now{
     width: 33px;
     height: 33px;
-    border: 1.5px solid #333333;
+    border: 1.5px solid #FFD18B;
     border-radius: 50%;
     background-color: #FFFFFF;
     display: grid;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    color: #FFD18B;
     font-size: 1rem;
     font-weight: bold;
 }
-.progress_correct{
-    width: 33px;
-    height: 33px;
-    border: 1.5px solid #9BEDA3;
-    border-radius: 50%;
-    background-color: #9BEDA3;
-    display: grid;
+
+.test_container{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10% 0;
+}
+.record_container{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #333333;
-    font-size: 1rem;
-    font-weight: bold;
+    gap: 5%;
 }
-.progress_wrong{
-    width: 33px;
-    height: 33px;
-    border: 1.5px solid #FB7474;
-    border-radius: 50%;
-    background-color: #FB7474;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    color: #333333;
-    font-size: 1rem;
-    font-weight: bold;
+.record_container img{
+    width: 100%;
+    height: 100%;
 }
+.record_container span{
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
 .controller_container{
-    width: 90%;
-    height: 20%;
-    margin-top: 30%;
+    width: 100%;
+    height: 10%;
+    margin-top: 25%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .controller{
-    width: 15%;
-    height: 30%;
-    background-color: #FFD18B;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 30%;
+    height: 120px;
 }
 .controller img{
     width: 100%;
