@@ -1,15 +1,29 @@
 import style from "./Main.module.css";
-import mainImg from "../assets/mainImg.png";
 import child1 from "../assets/mainChild1.png";
 import child2 from "../assets/mainChild2.png";
 import getUserInfo from "../assets/getUserInfo.png";
 import { useNavigate } from "react-router-dom";
 import ModalContainer from "../Components/modal/ModalContainer";
 import { useState } from "react";
+import mainImgWebP from '../assets/mainImg.webp';
+import mainImgFallback from '../assets/mainImg.png';
 
 const Main = () => {
     const[userName, setUserName] = useState('');
     const[userAge, setUserAge] = useState('');
+
+    // WebP 지원 여부를 확인
+    const supportsWebP = () => {
+        const elem = document.createElement('canvas');
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            // was able or not to get WebP representation
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+        }
+        // very old browser like IE 8, canvas not supported
+        return false;
+    };
+    
+    const backgroundImageUrl = supportsWebP() ? mainImgWebP : mainImgFallback;
 
     const navigate = useNavigate();
     const studyHandler = () => {
@@ -38,7 +52,7 @@ const Main = () => {
         setIsOpen(false);
     };
 
-    return <div className={style.wrapper} style={{ backgroundImage: `url(${mainImg})` }}>
+    return <div className={style.wrapper} style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
         <h2>무엇을 해볼까요?</h2>
 
         <div className={style.btn_container}>

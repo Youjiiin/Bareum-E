@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./Test.module.css";
 import testImg from "../../assets/testImg.png";
+import testImgWebP from "../../assets/testImg.webp";
 import Nav from "../../Components/navBar/Nav";
 import record from "../../assets/record.png";
 import check from "../../assets/check.png";
@@ -15,6 +16,19 @@ const Test = () => {
     const [testStep, setTestStep] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
     const [isConfirm, setIsConfirm] = useState(false);
+
+    // WebP 지원 여부를 확인
+    const supportsWebP = () => {
+        const elem = document.createElement('canvas');
+        if (!!(elem.getContext && elem.getContext('2d'))) {
+            // was able or not to get WebP representation
+            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+        }
+        // very old browser like IE 8, canvas not supported
+        return false;
+    };
+    
+    const backgroundImageUrl = supportsWebP() ? testImgWebP : testImg;
 
     const modalState = () => {
         setIsOpen(true);
@@ -43,7 +57,7 @@ const Test = () => {
         }
     }, [isOpen]);
 
-    return <div className={style.wrapper} style={{ backgroundImage: `url(${testImg})` }}>
+    return <div className={style.wrapper} style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
         <h2>직접 따라 읽어봐요!</h2>
         <div className={style.progress_container}>
             <div className={step1}>1</div>
