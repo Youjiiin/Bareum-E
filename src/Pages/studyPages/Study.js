@@ -4,9 +4,11 @@ import studyImgWebp from "../../assets/studyImg.webp";
 import { useState } from "react";
 import Nav from "../../Components/navBar/Nav.js";
 import AudioPlayer from "../../Components/audio/AudioPlayer.js";
+import down from "../../assets/down.png";
 
 const Study = () => {
     const [studyStep, SetStudyStep] = useState(0);
+    const [answer, setAnswer] = useState(false);
 
     // WebP 지원 여부를 확인
     const supportsWebP = () => {
@@ -17,6 +19,10 @@ const Study = () => {
         }
         // very old browser like IE 8, canvas not supported
         return false;
+    };
+
+    const answerHandler = () => {
+        setAnswer(!answer);
     };
     
     const backgroundImageUrl = supportsWebP() ? studyImgWebp : studyImg;
@@ -38,7 +44,14 @@ const Study = () => {
             <div className={step3}>3</div>
         </div>
 
-        <div className={style.study_text}>{TEXT[studyStep]}</div>
+        <div className={style.study_text}>
+            <p>{TEXT[studyStep]}</p>
+            {studyStep === 1 && 
+            <div className={style.study_answer}>
+            <img src={down} onClick={answerHandler} alt="answer" className={style.answer_btn}/>
+            {answer && <p className={style.answer_text}>예시 답안 입니다!!!!</p>}
+            </div>}
+        </div>
         <AudioPlayer />
         <Nav 
             studyStep={studyStep}
