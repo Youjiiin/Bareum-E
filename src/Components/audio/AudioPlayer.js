@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import listen from "../../assets/audioTest.m4a";
+import listen from "../../assets/output2.mp3";
 import style from "./AudioPlayer.module.css";
 import playImg from "../../assets/listen.png";
 import pause from "../../assets/pause.png";
@@ -13,7 +13,7 @@ const useAudio = (listen) => {
   useEffect(() => {
       playing ? audio.play() : audio.pause();
     },
-    [playing]
+    [playing, audio]
   );
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const useAudio = (listen) => {
     return () => {
       audio.removeEventListener('ended', () => setPlaying(false));
     };
-  }, []);
+  }, [audio]);
 
   return [playing, toggle];
 };
