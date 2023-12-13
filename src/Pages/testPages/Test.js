@@ -58,11 +58,11 @@ const Test = () => {
     const TEXT3 = "귤은 무슨색이야?";
     const TEXT = [TEXT1, TEXT2, TEXT3];
 
-    const COMMENT1 = "아이의 발음 : 경찰청 창살은 쇠창살 \n발음 점수 : A \n발음 교정해야 될 부분 : 없는데 \n발음을 잘할 수 있는 팁 : 나보다 발음 잘하는데..?";
+    const COMMENT1 = "아이의 발음 : 오늘은 친구들이랑 놀이터에서 놀았어요 \n발음 점수 : A \n발음 교정해야 될 부분 : 없음 \n발음을 잘할 수 있는 팁 : 이미 정확한 발음을 하고 있으니, 이 발음을 유지하며 자신감을 가지고 말하는 연습을 계속해보세요.";
 
-    const COMMENT2 = "정답 : O \n아이의 발음 : 경찰청 창살은 쇠창살 \n발음 점수 : A \n발음 교정해야 될 부분 : 없는데 \n발음을 잘할 수 있는 팁 : 나보다 발음 잘하는데..?";
+    const COMMENT2 = "정답 : X \n아이의 발음 : 공무원 동그레이오 \n발음 점수 : B \n발음 교정해야 될 부분 : '공은'을 '공무원'으로, '동그래요'를 '동그레이오'로 잘못 발음하였습니다. \n발음을 잘할 수 있는 팁 : 정확한 발음을 위해서는 단어의 각 글자를 천천히, 분명하게 발음하는 연습이 필요해요. '공은'과 '동그래요'를 또박또박 연습하면서 발음의 차이를 느껴보세요. 또한, 발음이 헷갈릴 때는 단어를 눈으로 보면서 입 모양과 혀의 위치를 확인하며 발음해보는 것도 도움이 됩니다.";
 
-    const COMMENT3 = "정답 : X \n아이의 발음 : 경찰청 창살은 쇠창살 \n발음 점수 : A \n발음 교정해야 될 부분 : 없는데 \n발음을 잘할 수 있는 팁 : 나보다 발음 잘하는데..?";
+    const COMMENT3 = '정답 : O \n아이의 발음 : 귤은 주황색이에요 \n발음 점수 : A \n발음 교정해야 될 부분 : 없음 \n발음을 잘할 수 있는 팁 : 아주 잘하고 있어요! 또박또박 천천히 발음하는 연습을 계속하면 더욱 발음이 명확해질 거예요.';
 
     const COMMENT = [COMMENT1, COMMENT2, COMMENT3];
 
@@ -82,7 +82,7 @@ const Test = () => {
     }, [isOpen]);
 
     return <div className={style.wrapper} style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
-        <h2>직접 따라 읽어봐요!</h2>
+        {testStep === 0 ? <h2>직접 따라 읽어봐요!</h2> : <h2>질문에 답해 봐요!</h2>}
         <div className={style.progress_container}>
             <div className={step1}>1</div>
             <div className={step2}>2</div>
